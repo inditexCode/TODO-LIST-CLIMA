@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+:root {
+    --white: #fafafb;
+    --dark: #000000;
+    --purple: #e502ed;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    /* Fondo negro con 50% de transparencia */
+    height: 100%;
+    background: linear-gradient(to bottom, var(--white), var(--green));
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+
+    
+    .container {
+        max-height: 100%;
+        max-width: 80%;
+        width: 400px;
+        height: 100rem;
+        display: flex;
+        flex-direction: column;
+      
+       align-items:center;
+        margin: 0 auto;
+        border-style: groove;
+        border: none;
+        background: linear-gradient(to bottom, var(--blue-dark), var(--blue-light));
+        overflow: hidden; /* Evitar desbordamiento de contenido */
+      
+    }   
+    
+
+/* perfil */
+.perfil {
+    margin-top: 20px;
+   
+ 
+}
+
+.perfil span {
+    color: rgb(1, 1, 1);
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+   margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom:0;
+    padding-top: 10px;
+}
+
+#fecha {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.fechaContenedor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f9f6f6;
+    margin: 0 40px;
+    margin-left: 0;
+}
+
+.horaContenedor {
+    font-size: 18px;
+    color: #f8f5f5;
+   margin-right: 0;
+    
+}
+
+/* AGREGAR TAREAS */
+.agregar-tarea {
+    background-color: white;
+    border-radius: 15px;
+    height: 60px;
+    
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px; /* Ajustado para un espaciado más uniforme */
+    margin: 20px 0; /* Reducido el margen inferior */
+}
+
+.agregar-tarea input {
+    flex: 1; /* Para ocupar el espacio restante */
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+}
+
+.agregar-tarea i {
+    font-size: 30px; /* Reducido el tamaño del icono */
+    color: linear-gradient(to bottom, var(--blue-dark), var(--blue-light));
+
+    cursor: pointer;
+}
+
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    color: var(--blue-dark);
+}
+
+.agregar-tarea input::placeholder {
+    font-size: 1rem; /* Ajustado el tamaño del marcador de posición */
+    color: #080808;
+}
+
+/* seccion tareas */
+.seccion-tarea h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+    display: flex;
+    background: linear-gradient(to bottom, var(--blue-dark), var(--blue-light));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: var(--white);
+}
+
+.seccion-tarea i {
+    font-size: 25px;
+}
+
+.seccion-tarea i:hover {
+    color: var(--blue-dark);
+    cursor: pointer;
+}
+
+.seccion-tarea > ul p {
+    font-size: 1rem; /* Ajustado el tamaño del texto */
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: var(--white);
+}
+
+/* clima------------------------------------------------------------ */
+
+#datosClima{
+  color: #a10d0d;
+}
+#datosClima h2{
+    font-size: 1.5rem;
+    color: rgb(3, 3, 3);
+    white-space: nowrap;
+}
+#datosClima .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#datosClima img {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+#datosClima p{
+    font-size: 0.8rem;
+    white-space: nowrap;
+    color: rgb(4, 4, 4);
+    display: flex;
+   justify-content: space-between;
+    font-weight: bold;
+}
+
+
+
+
+input[type="text"] {
+    padding: 5px 20px; /* Ajustado el espaciado interno */
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(251, 248, 248);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: #080808;
+}
+
+button {
+    background: linear-gradient(to bottom, var(--blue-dark), var(--blue-light));
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0; /* Ajustado el margen inferior */
+    border: none;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    color: rgb(240, 240, 240);
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+    h1,
+    .contenedor,
+    #datosClima {
+        display: block;
+        text-align: center;
+       
+        box-sizing: border-box;
+    }
+
+    input[type="text"] {
+        font-size: 0.8rem; /* Ajustado el tamaño del texto */
+        padding: 8px; /* Ajustado el espaciado interno */
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+        margin-top: 1rem;
+        font-size: 0.8rem; /* Ajustado el tamaño del texto */
+    }
+
+    #datosClima {
+        width: 100%;
+        margin-top: 0.5rem;
+        font-size: 0.8rem; /* Ajustado el tamaño del texto */
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
